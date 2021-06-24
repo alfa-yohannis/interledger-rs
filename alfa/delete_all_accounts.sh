@@ -1,3 +1,5 @@
+export RUST_LOG=interledger=debug
+
 cargo run --bin ilp-cli -- --node http://127.0.0.1:7770 accounts delete alice --auth hi_alice
 cargo run --bin ilp-cli -- --node http://127.0.0.1:7770 accounts delete bob --auth hi_alice
 cargo run --bin ilp-cli -- --node http://127.0.0.1:7770 accounts delete charlie --auth hi_alice

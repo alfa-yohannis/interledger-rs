@@ -1,3 +1,4 @@
+export RUST_LOG=interledger=debug
 
 # alice at alice node
 cargo run --bin ilp-cli -- \

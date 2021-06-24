@@ -1,3 +1,5 @@
+export RUST_LOG=interledger=debug
+
 cargo run --bin ilp-node -- \
   --ilp_address example.charlie \
   --secret_seed 1232362131122139900555208458637022875563691455429373719368053354 \
