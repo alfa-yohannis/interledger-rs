@@ -544,7 +544,7 @@ where
                     // Since we decrypted the response, the recipient read the request packet and knows our account
                     
                     // ALFA - I commented this so that sender account is always included
-                    // payment.should_send_source_account = false;
+                    payment.should_send_source_account = false;
 
                     // Update the destination asset scale & code
                     // https://github.com/interledger/rfcs/pull/551 ensures that this won't change
