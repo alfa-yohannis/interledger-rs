@@ -305,11 +305,12 @@ fn receive_money(
         // code & scale. The client is suppoesd to only send the
         // ConnectionNewAddress frame once, so we expect that we will only have
         // to respond with the ConnectionAssetDetails frame only one time.
-        if let Frame::ConnectionNewAddress(_) = frame {
+        if let Frame::ConnectionNewAddress(ref second_frame) = frame {
             response_frames.push(Frame::ConnectionAssetDetails(ConnectionAssetDetailsFrame {
                 source_asset_code: asset_code,
                 source_asset_scale: asset_scale,
-            }));
+            }));        
+            debug!("ORIGIN: {:?} ", second_frame.source_account,);
         }
 
         // The last packet contains the ConnectionClose frame;
