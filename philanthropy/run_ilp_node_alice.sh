@@ -1,4 +1,4 @@
-export RUST_LOG=interledger=trace
+export RUST_LOG=interledger=debug
 
 cargo run --bin ilp-node -- \
   --ilp_address example.y.alice \
